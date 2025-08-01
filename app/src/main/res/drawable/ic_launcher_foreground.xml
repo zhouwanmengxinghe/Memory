@@ -1,0 +1,54 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- 背景圆形 -->
+    <path
+        android:fillColor="#FFE4E1"
+        android:pathData="M0,0h108v108h-108z"/>
+    
+    <!-- 外层圆形边框 -->
+    <path
+        android:fillColor="#FF69B4"
+        android:pathData="M54,54m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0"/>
+    
+    <!-- 内层圆形 -->
+    <path
+        android:fillColor="#FFB6C1"
+        android:pathData="M54,54m-45,0a45,45 0,1 1,90 0a45,45 0,1 1,-90 0"/>
+    
+    <!-- 爱心图标 -->
+    <path
+        android:fillColor="#DC143C"
+        android:pathData="M54,75L42,63c-6.6,-6.6 -6.6,-17.4 0,-24c6.6,-6.6 17.4,-6.6 24,0l0,0c6.6,-6.6 17.4,-6.6 24,0c6.6,6.6 6.6,17.4 0,24L54,75z"/>
+    
+    <!-- 小爱心装饰 -->
+    <path
+        android:fillColor="#FF1493"
+        android:pathData="M35,35L30,30c-2.2,-2.2 -2.2,-5.8 0,-8c2.2,-2.2 5.8,-2.2 8,0l0,0c2.2,-2.2 5.8,-2.2 8,0c2.2,2.2 2.2,5.8 0,8L35,35z"/>
+    
+    <path
+        android:fillColor="#FF1493"
+        android:pathData="M78,40L73,35c-2.2,-2.2 -2.2,-5.8 0,-8c2.2,-2.2 5.8,-2.2 8,0l0,0c2.2,-2.2 5.8,-2.2 8,0c2.2,2.2 2.2,5.8 0,8L78,40z"/>
+    
+    <!-- 时间轴线条 -->
+    <path
+        android:strokeColor="#FF69B4"
+        android:strokeWidth="2"
+        android:pathData="M25,85L83,85"/>
+    
+    <!-- 时间点 -->
+    <path
+        android:fillColor="#FF69B4"
+        android:pathData="M30,85m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    
+    <path
+        android:fillColor="#FF69B4"
+        android:pathData="M54,85m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+    
+    <path
+        android:fillColor="#FF69B4"
+        android:pathData="M78,85m-3,0a3,3 0,1 1,6 0a3,3 0,1 1,-6 0"/>
+</vector>
