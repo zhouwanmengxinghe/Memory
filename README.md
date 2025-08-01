@@ -7,8 +7,20 @@
 ### 📝 回忆记录
 - **标题和日期**：为每个回忆添加标题和日期
 - **文字留言**：记录详细的回忆内容
-- **照片记录**：从相册选择照片保存美好瞬间
+- **多张照片**：支持选择多张照片保存美好瞬间
 - **语音留言**：录制语音，保存当时的声音和情感
+
+### 💕 纪念日管理
+- **纪念日记录**：记录重要的纪念日和特殊日子
+- **天数计算**：自动计算距离纪念日的天数
+- **重要标记**：可标记重要纪念日进行特别提醒
+- **详细描述**：为每个纪念日添加详细描述
+
+### 💾 数据备份
+- **导出备份**：将所有回忆和纪念日数据导出为备份文件
+- **导入恢复**：从备份文件恢复数据到新设备
+- **完整备份**：包含文字、照片、音频的完整数据备份
+- **文件分享**：可通过系统分享功能发送备份文件
 
 ### 🎨 精美界面
 - **浪漫粉色主题**：温馨浪漫的粉色系配色
@@ -40,16 +52,19 @@
 ```
 app/src/main/java/com/example/myapplication1/
 ├── data/                    # 数据层
-│   ├── MemoryEvent.kt      # 数据模型
-│   ├── MemoryEventDao.kt   # 数据访问对象
+│   ├── MemoryEvent.kt      # 回忆数据模型
+│   ├── MemoryEventDao.kt   # 回忆数据访问对象
+│   ├── Anniversary.kt      # 纪念日数据模型
+│   ├── AnniversaryDao.kt   # 纪念日数据访问对象
 │   ├── MemoryDatabase.kt   # 数据库配置
 │   ├── MemoryRepository.kt # 数据仓库
 │   └── Converters.kt       # 类型转换器
 ├── ui/
 │   ├── screens/            # 页面组件
 │   │   ├── HomeScreen.kt   # 主页面
-│   │   ├── AddEditEventScreen.kt # 添加/编辑页面
-│   │   └── EventDetailScreen.kt  # 详情页面
+│   │   ├── AddEditEventScreen.kt # 添加/编辑回忆页面
+│   │   ├── EventDetailScreen.kt  # 回忆详情页面
+│   │   └── AnniversaryScreen.kt  # 纪念日管理页面
 │   ├── components/         # UI组件
 │   │   ├── MemoryComponents.kt   # 回忆卡片组件
 │   │   └── AnimationComponents.kt # 动画组件
@@ -59,9 +74,13 @@ app/src/main/java/com/example/myapplication1/
 │       └── Type.kt         # 字体配置
 ├── utils/                  # 工具类
 │   ├── AudioManager.kt     # 音频管理
-│   └── FileUtils.kt        # 文件工具
+│   ├── FileUtils.kt        # 文件工具
+│   └── ExportImportUtils.kt # 导入导出工具
 ├── viewmodel/              # 视图模型
-│   └── MemoryViewModel.kt  # 主视图模型
+│   ├── MemoryViewModel.kt  # 回忆视图模型
+│   └── AnniversaryViewModel.kt # 纪念日视图模型
+├── di/                     # 依赖注入
+│   └── DatabaseModule.kt   # 数据库模块
 └── MainActivity.kt         # 主活动
 ```
 
@@ -72,7 +91,7 @@ app/src/main/java/com/example/myapplication1/
 2. 填写回忆标题
 3. 选择日期（默认为今天）
 4. 添加文字留言
-5. 可选择添加照片（点击照片区域）
+5. 可选择添加多张照片（点击照片区域）
 6. 可选择录制语音（长按录音按钮）
 7. 点击保存按钮
 
@@ -90,6 +109,20 @@ app/src/main/java/com/example/myapplication1/
 - 在回忆卡片上点击删除按钮
 - 或在详情页面点击删除按钮
 - 确认删除操作
+
+### 纪念日管理
+- 点击主页面顶部的纪念日按钮进入纪念日页面
+- 点击右上角的 + 号添加新纪念日
+- 填写纪念日名称、日期和描述
+- 可标记为重要纪念日
+- 自动计算距离纪念日的天数
+- 支持编辑和删除纪念日
+
+### 数据备份
+- **导出备份**：点击主页面菜单中的"导出备份"
+- **导入备份**：点击主页面菜单中的"导入备份"，选择备份文件
+- **分享备份**：导出后可通过系统分享功能发送备份文件
+- 备份包含所有回忆、纪念日、照片和音频文件
 
 ### 音频功能
 - **录制**：在添加/编辑页面长按录音按钮
