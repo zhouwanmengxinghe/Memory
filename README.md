@@ -128,14 +128,6 @@ app/src/main/java/com/example/myapplication1/
    ./gradlew installDebug
    ```
 
-## 未来计划
-
-- [ ] 添加数据导出功能
-- [ ] 支持更多媒体格式
-- [ ] 添加回忆分类标签
-- [ ] 支持回忆搜索功能
-- [ ] 添加回忆统计图表
-- [ ] 支持主题自定义
 
 ## 许可证
 
